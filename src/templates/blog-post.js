@@ -6,6 +6,10 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
 
+
+
+
+
 export const BlogPostTemplate = ({
   content,
   contentComponent,
@@ -21,7 +25,7 @@ export const BlogPostTemplate = ({
       {helmet || ''}
       <div className="container content">
         <div className="columns">
-          <div className="column is-10 is-offset-1">
+          <div className="column is-8 is-offset-1">
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
@@ -29,7 +33,7 @@ export const BlogPostTemplate = ({
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
-                <h4>Tags</h4>
+                <h4>Теги</h4>
                 <ul className="taglist">
                   {tags.map((tag) => (
                     <li key={tag + `tag`}>
@@ -54,13 +58,14 @@ BlogPostTemplate.propTypes = {
   helmet: PropTypes.object,
 }
 
+
 const BlogPost = ({ data }) => {
   const { markdownRemark: post } = data
 
   return (
     <Layout>
       <BlogPostTemplate
-        content={post.html}
+        content={post.htmlAst}
         contentComponent={HTMLContent}
         description={post.frontmatter.description}
         helmet={
@@ -91,9 +96,10 @@ export const pageQuery = graphql`
   query BlogPostByID($id: String!) {
     markdownRemark(id: { eq: $id }) {
       id
-      html
+      htmlAst
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
+        postindex
         title
         description
         tags

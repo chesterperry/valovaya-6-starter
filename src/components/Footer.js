@@ -2,58 +2,58 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import logo from '../img/logo.svg'
-import facebook from '../img/social/facebook.svg'
+/* import facebook from '../img/social/facebook.svg'
 import instagram from '../img/social/instagram.svg'
 import twitter from '../img/social/twitter.svg'
 import vimeo from '../img/social/vimeo.svg'
-
+ */
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="footer has-background-black has-text-white-ter">
-        <div className="content has-text-centered">
+      <footer className="footer has-background-black-ter			 has-text-white-ter">
+{/*         <div className="content has-text-centered">
           <img
             src={logo}
             alt="Kaldi"
             style={{ width: '14em', height: '10em' }}
           />
-        </div>
-        <div className="content has-text-centered has-background-black has-text-white-ter">
-          <div className="container has-background-black has-text-white-ter">
+        </div> */}
+        <div className="content has-text-centered has-background-black-ter			 has-text-white-ter">
+          <div className="container has-background-black-ter			 has-text-white-ter">
             <div style={{ maxWidth: '100vw' }} className="columns">
               <div className="column is-4">
                 <section className="menu">
                   <ul className="menu-list">
                     <li>
                       <Link to="/" className="navbar-item">
-                        Home
+                        На главную
                       </Link>
                     </li>
                     <li>
                       <Link className="navbar-item" to="/about">
-                        About
+                        Информация
                       </Link>
                     </li>
                     <li>
-                      <Link className="navbar-item" to="/products">
-                        Products
+                      <Link className="navbar-item" to="/culture">
+                        Культура
                       </Link>
                     </li>
-                    <li>
-                      <Link className="navbar-item" to="/contact/examples">
-                        Form Examples
+{/*                     <li>
+                      <Link className="navbar-item" to="/contact">
+                        Контакты
                       </Link>
-                    </li>
-                    <li>
+                    </li> */}
+{/*                     <li>
                       <a
                         className="navbar-item"
                         href="/admin/"
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        Admin
+                        
                       </a>
-                    </li>
+                    </li> */}
                   </ul>
                 </section>
               </div>
@@ -61,19 +61,19 @@ const Footer = class extends React.Component {
                 <section>
                   <ul className="menu-list">
                     <li>
-                      <Link className="navbar-item" to="/blog">
-                        Latest Stories
+                      <Link className="navbar-item" to="/news">
+                      Последние новости
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link className="navbar-item" to="/contact">
-                        Contact
+                        Контакты
                       </Link>
-                    </li>
+                    </li> */}
                   </ul>
                 </section>
               </div>
-              <div className="column is-4 social">
+ {/*              <div className="column is-4 social">
                 <a title="facebook" href="https://facebook.com">
                   <img
                     src={facebook}
@@ -103,7 +103,7 @@ const Footer = class extends React.Component {
                     style={{ width: '1em', height: '1em' }}
                   />
                 </a>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
