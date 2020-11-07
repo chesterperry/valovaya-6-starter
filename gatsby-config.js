@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: 'Страница дома на Валовой 6',
+    title: 'Валовая, 6 для соседей',
     description:
-      'Для обмена информацией между соседями',
+      'Для обмена полезной информацией между соседями',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -32,6 +32,15 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "G-XYHCGPBQ2N",
+        // this option places the tracking script into the head of the DOM
+        head: true,
+        // other options
+      },
+    },
+    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
@@ -48,6 +57,7 @@ module.exports = {
                 "heading[depth=1]": "title",
                 "heading[depth=2]": "subtitle",
                 table:"table is-bordered is-striped is-narrow is-fullwidth",
+                image: "remark-image",
               }
             }
           },

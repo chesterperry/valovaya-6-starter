@@ -68,7 +68,11 @@ export const IndexPageTemplate = ({
               <div className="content">
                 <div className="content">
                   <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
+                    <h1 className="title">{mainpitch.title} <img src={image.childImageSharp.fluid.src } 
+                    style={{'max-height': 1 + 'em',
+                    padding: 0 + 'px !important',
+                    }}/></h1>
+                    
                   </div>
                   <div className="tile">
                     <h3 className="subtitle">{mainpitch.description}</h3>
@@ -123,7 +127,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        image={frontmatter.image}
+        image={frontmatter.featuredimage}
         title={frontmatter.title}
         mainpitch={frontmatter.mainpitch}
         description={frontmatter.description}
@@ -147,9 +151,9 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
-        image {
+        featuredimage {
           childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
+            fluid(maxWidth: 900, quality: 100) {
               ...GatsbyImageSharpFluid
             }
           }

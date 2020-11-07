@@ -1,8 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Counter from "../components/counter"
 import rehypeReact from "rehype-react"
-
+import MessageInfo from './MessageInfo'
+import MessageWarning from './MessageWarning'
+import Citation from './Сitation'
 
 
 export const HTMLContent = ({ content, className }) => (
@@ -11,7 +12,11 @@ export const HTMLContent = ({ content, className }) => (
 
 const renderAst = new rehypeReact({
   createElement: React.createElement,
-  components: { "interactive-counter": Counter },
+  components: 
+    { "messageinfo": MessageInfo , 
+    "messagewarning": MessageWarning,
+    "citation": Citation    
+  }
 }).Compiler
 
 const Content = ({ content, className }) => (

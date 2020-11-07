@@ -1,10 +1,10 @@
 @import "~bulma/sass/utilities/initial-variables"
 
-
 // Config vars
 // Kaldi logo brand color: #FD461E
 $kaldi-red: #561013
 $kaldi-red-invert: #fff
+$body-font-size: 18px
 
 $primary: $kaldi-red
 $primary-invert: $kaldi-red-invert
@@ -15,18 +15,40 @@ $green: #244f26
 $body-family: Georgia
 $link: #000
 
+h1,h2,h3,h4,h5,h6
+  padding-top: 0.75em !important
+
+img
+  padding-top: 0.25em !important
+  padding-bottom: 0.25em !important
+
+a[href*="//"]::after
+  content: ' '
+  background-image: url(http://localhost:8000/img/external-link.svg)
+  padding-left: 1rem
+  display: inline-block
+  background-repeat: no-repeat
+  width: 0.7rem
+  height: 0.7rem
+  margin-left: 0.5rem
+
+a[href*="//"]:hover
+  opacity: 0.33
+
+body
+  min-height: 100vh
+
 
 .green-background
   background-color: $green
 
 .navbar .navbar-menu
-  box-shadow:none !important
-  
-  
-.banner 
-    background-blend-mode: screen
- 
+  box-shadow: none !important
 
+.remark-image
+  max-height: 600px
+  display: block
+  margin: 0 auto
 
 .content .taglist
   list-style: none
@@ -58,30 +80,30 @@ $link: #000
   align-items: center
 
 .full-width-image
-    width: 100vw
-    height: 400px
-    background-size: cover
-    background-position: bottom
-    display: flex
-    justify-content: center
-    align-items: center
+  width: 100vw
+  height: 400px
+  background-size: cover
+  background-position: bottom
+  display: flex
+  justify-content: center
+  align-items: center
 
 .btn
-    display: inline-block
-    padding: 12px 16px 10px
-    font-size: 18px
-    font-size: 1rem
-    line-height: 1.25
-    background-color: #fff
-    border-radius: .25rem
-    text-decoration: none
-    font-weight: 700
-    color: #561013
-    text-align: center
-    -webkit-box-shadow: inset 0 0 0 2px #561013
-    box-shadow: inset 0 0 0 2px #2c5784
-    -webkit-transition: all .15s ease
-    transition: all .15s ease
+  display: inline-block
+  padding: 12px 16px 10px
+  font-size: 18px
+  font-size: 1rem
+  line-height: 1.25
+  background-color: #fff
+  border-radius: .25rem
+  text-decoration: none
+  font-weight: 700
+  color: #561013
+  text-align: center
+  -webkit-box-shadow: inset 0 0 0 2px #561013
+  box-shadow: inset 0 0 0 2px #2c5784
+  -webkit-transition: all .15s ease
+  transition: all .15s ease
 
 .margin-top-0
   margin-top: 0 !important
@@ -95,7 +117,7 @@ $link: #000
   fill: currentColor
 .navbar-brand .navbar-item.logo
   padding: 0 1rem
-  align: center;
+  align: center
 footer.footer
   padding: 3rem 0rem 0rem
   background-color: transparent
@@ -109,7 +131,6 @@ $menu-item-active-background-color:	$kaldi-red-invert
 $menu-list-border-left: 1px solid $kaldi-red-invert
 $menu-label-color: $white-ter
 
-
 .menu-label
   font-size: 1em !important
   text-align: left
@@ -119,38 +140,36 @@ $menu-label-color: $white-ter
 .social
   padding: 2em
 .social a
-    padding: .5em .5em .3em .5em
-    border-radius: 1em
-    background-color: $white-ter
-    margin: .5em
-    width: 1em
-    height: 1em
-    vertical-align: middle
-    display: inline
+  padding: .5em .5em .3em .5em
+  border-radius: 1em
+  background-color: $white-ter
+  margin: .5em
+  width: 1em
+  height: 1em
+  vertical-align: middle
+  display: inline
 
 // blog roll
 .blog-list-item.is-featured
-  background-color: hsl(0, 0%, 96%)  ;
+  background-color: hsl(0, 0%, 96%)
 .blog-list-item header
-  display: flex;
-  margin-bottom: 1em;
+  display: flex
+  margin-bottom: 1em
 .blog-list-item .featured-thumbnail
-  flex-basis: 50%;
-  margin: 0 1.5em 0 0;
-
+  flex-basis: 50%
+  margin: 0 1.5em 0 0
 
 @import "~bulma"
-
 
 // responsiveness
 +tablet-only
   .blog-list-item .featured-thumbnail
-    flex-basis: 50%;
+    flex-basis: 50%
 
 +mobile
   .blog-list-item header
     display: block
   .blog-list-item .featured-thumbnail
-    text-align: center;
-    max-width: 70%;
-    margin: 0 0 1em;
+    text-align: center
+    max-width: 70%
+    margin: 0 0 1em

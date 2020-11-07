@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import Content, { HTMLContent } from '../components/Content'
+import MessageWarning from '../components/MessageWarning'
 
 
 
@@ -25,18 +26,20 @@ export const BlogPostTemplate = ({
       {helmet || ''}
       <div className="container content">
         <div className="columns">
-          <div className="column is-8 is-offset-1">
+          <div className="column is-8 is-offset-2">
             <h1 className="title is-size-2 has-text-weight-bold is-bold-light">
               {title}
             </h1>
             <p>{description}</p>
+            
+            <MessageWarning>Сайт находится в разработке. Если вы нашли ошибку сообщите нам.</MessageWarning>
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>
                 <h4>Теги</h4>
-                <ul className="taglist">
+                <ul className="tags">
                   {tags.map((tag) => (
-                    <li key={tag + `tag`}>
+                    <li key={tag + `tag`} className="tag is-light is-medium">
                       <Link to={`/tags/${kebabCase(tag)}/`}>{tag}</Link>
                     </li>
                   ))}

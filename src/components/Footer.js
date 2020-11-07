@@ -10,7 +10,7 @@ import vimeo from '../img/social/vimeo.svg'
 const Footer = class extends React.Component {
   render() {
     return (
-      <footer className="footer has-background-black-ter			 has-text-white-ter">
+      <footer className="footer">
 {/*         <div className="content has-text-centered">
           <img
             src={logo}
@@ -18,7 +18,7 @@ const Footer = class extends React.Component {
             style={{ width: '14em', height: '10em' }}
           />
         </div> */}
-        <div className="content has-text-centered has-background-black-ter			 has-text-white-ter">
+{/*         <div className="content has-text-centered has-background-black-ter			 has-text-white-ter">
           <div className="container has-background-black-ter			 has-text-white-ter">
             <div style={{ maxWidth: '100vw' }} className="columns">
               <div className="column is-4">
@@ -34,17 +34,13 @@ const Footer = class extends React.Component {
                         Информация
                       </Link>
                     </li>
+
                     <li>
-                      <Link className="navbar-item" to="/culture">
-                        Культура
-                      </Link>
-                    </li>
-{/*                     <li>
                       <Link className="navbar-item" to="/contact">
                         Контакты
                       </Link>
-                    </li> */}
-{/*                     <li>
+                    </li>
+                    <li>
                       <a
                         className="navbar-item"
                         href="/admin/"
@@ -53,7 +49,7 @@ const Footer = class extends React.Component {
                       >
                         
                       </a>
-                    </li> */}
+                    </li>
                   </ul>
                 </section>
               </div>
@@ -65,15 +61,21 @@ const Footer = class extends React.Component {
                       Последние новости
                       </Link>
                     </li>
-                    {/* <li>
+                    <li>
+                      <Link className="navbar-item" to="/culture">
+                        Культура
+                      </Link>
+                    </li>
+                    <li>
                       <Link className="navbar-item" to="/contact">
                         Контакты
                       </Link>
-                    </li> */}
+                    </li> 
                   </ul>
                 </section>
               </div>
- {/*              <div className="column is-4 social">
+              
+              <div className="column is-4 social">
                 <a title="facebook" href="https://facebook.com">
                   <img
                     src={facebook}
@@ -103,9 +105,12 @@ const Footer = class extends React.Component {
                     style={{ width: '1em', height: '1em' }}
                   />
                 </a>
-              </div> */}
+              </div>
             </div>
           </div>
+        </div> */}
+        <div class="content has-text-centered mb-3" >
+        <p>&copy;Щербинин Олег, {new Date().getFullYear()} лицензия <a href="https://creativecommons.org/licenses/by/4.0/deed.ru">CC BY 4.0 </a></p> 
         </div>
       </footer>
     )
