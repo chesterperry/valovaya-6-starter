@@ -32,7 +32,7 @@ export const BlogPostTemplate = ({
             </h1>
             <p>{description}</p>
             
-            <MessageWarning>Сайт находится в разработке. Если вы нашли ошибку сообщите нам.</MessageWarning>
+            <MessageWarning>Сайт находится в разработке. Если вы нашли ошибку сообщите мне в <a href="https://wa.me/79261763534?text=Привет!%20насчет%20сайта">WhatsApp.</a></MessageWarning>
             <PostContent content={content} />
             {tags && tags.length ? (
               <div style={{ marginTop: `4rem` }}>

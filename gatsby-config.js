@@ -32,15 +32,6 @@ module.exports = {
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: "G-XYHCGPBQ2N",
-        // this option places the tracking script into the head of the DOM
-        head: true,
-        // other options
-      },
-    },
-    {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
