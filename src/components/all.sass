@@ -14,29 +14,8 @@ $wheat: #f7ddb6
 $green: #244f26
 $body-family: Georgia
 $link: #000
+$dropdown-menu-min-width: 20rem	
 
-h1,h2,h3,h4,h5,h6
-  padding-top: 0.75em !important
-
-img
-  padding-top: 0.25em !important
-  padding-bottom: 0.25em !important
-
-a[href*="//"]::after
-  content: ' '
-  background-image: url(http://localhost:8000/img/external-link.svg)
-  padding-left: 1rem
-  display: inline-block
-  background-repeat: no-repeat
-  width: 0.7rem
-  height: 0.7rem
-  margin-left: 0.5rem
-
-a[href*="//"]:hover
-  opacity: 0.33
-
-body
-  min-height: 100vh
 
 
 .green-background
@@ -45,10 +24,7 @@ body
 .navbar .navbar-menu
   box-shadow: none !important
 
-.remark-image
-  max-height: 600px
-  display: block
-  margin: 0 auto
+
 
 .content .taglist
   list-style: none
@@ -173,3 +149,5 @@ $menu-label-color: $white-ter
     text-align: center
     max-width: 70%
     margin: 0 0 1em
+
+@import "custom"

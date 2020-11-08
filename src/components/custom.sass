@@ -1,0 +1,24 @@
+h1,h2,h3,h4,h5,h6
+    padding-top: 0.75em !important
+
+img
+    padding-top: 0.25em !important
+    padding-bottom: 0.25em !important
+
+a[href*="//"]::after
+    content: ' '
+    background-image: url(http://localhost:8000/img/external-link.svg)
+    padding-left: 1rem
+    display: inline-block
+    background-repeat: no-repeat
+    width: 0.7rem
+    height: 0.7rem
+    margin-left: 0.5rem
+
+a[href*="//"]:hover
+    opacity: 0.33
+
+.remark-image
+    max-height: 600px
+    display: block
+    margin: 0 auto
